@@ -33,7 +33,7 @@ p
 .wrapper
     padding-left: 5px
     padding-right: 5px
-    max-width: 960px
+    max-width: 1180px
     margin: 0 auto     
 .burger
     width:19px
@@ -69,8 +69,7 @@ p
      font-weight: 400
      font-family: "Rubik"
 .tinyletter
-   width: 194px
-   height: 63px
+   
    font-size: 13px
    line-height: 19px
    color: #999999
@@ -100,6 +99,24 @@ p
      font-weight: 400
      font-family: "Rubik"
      text-align: center
+.star
+   position: relative
+   &::before
+      background: linear-gradient(135deg,green 50%,transparent 50%)
+      +prepareBefore()
+      width: 60px
+      height: 60px 
+      z-index: 1 
+   &::after
+      +prepareBefore()
+      background-image: url("../img/star.png")
+      width: 17px
+      height: 17px
+      z-index: 2
+      top: 10px
+      left: 10px
+
+
 header
    background-image: url("../img/boat.png")
    min-height: 800px
@@ -117,6 +134,17 @@ header
       font-weight: 400
       font-family: "Rubik"
       text-align: center
+   .logo
+      span
+         display: inline-block
+         padding: 10px
+         font-size: 36px
+         line-height: 21px    
+         color: #ffffff
+         font-weight: 500
+         font-family: "Exo 2"
+         text-align: center
+
    .bigletter
      text-align: center
    .menu
@@ -128,6 +156,25 @@ header
       ul
          display: flex
          gap: 30px
+      a
+         font-family: "Rubik"
+   .frame
+      margin: 0 auto
+      max-width: 367px
+      width: 90%
+      padding-bottom: 50px
+      position: relative
+      &::before
+         +prepareBefore()
+         border: 4px solid white
+         border-top: none
+         width: 100%
+         height: 100%
+         opacity: 0.2
+   .frame-top
+      &::before
+         border-bottom: none
+         border-top: 4px solid white
    .arrow
       
       width: 100%
@@ -179,4 +226,243 @@ main
    font-family: "Rubik"
    text-align: center
 
+.thailand
+   display: flex
+   .smallletter
+      color:#000
+      text-align: left
+   .rest
+      display: flex   
+   .price
+      white-space: nowrap
+   .button
+      display: inline-block
+      margin-right: 10px
+      font-style: none
+   .white-button
+      color:  #0099ff
+      background-color: white
+      border:  #0099ff 1px solid
+.life
+   background-image: url("../img/background.png") 
+   background-size: cover
+   background-position: center
+   .wrapper
+      display: flex
+      padding-top: 90px
+
+   .slogan 
+      width: 50%
+      text-align: left
+      h2.bigletter
+         font-size: 56px
+         margin-bottom: 30px
+         line-height: 66px
+         span 
+            color: #0099ff
+      p.smallletter
+         font-style: normal
+         text-align: left
+      a.button
+         margin: 30px 0
+.caption
+   width: 50%
+   display: flex
+   justify-content: center
+   flex-direction: column
+   position: relative
+   &::before
+      +prepareBefore()
+      border: 4px solid white
+      border-right: none
+      width: 30%
+      height: 100%
+      opacity: 0.102
+   &::after
+      +prepareBefore()
+      left: auto
+      right: 0
+      border: 4px solid white
+      border-left: none
+      width: 30%
+      height: 100%
+      opacity: 0.102
+   img 
+      width: auto
+      margin: 0 auto
+   .comma
+      width: 42px
+      height: 38px
+      margin-bottom: 14px
+   .midletter
+      margin-top: 17px
+      color: #ffffff
+   .man
+      width: 80px
+      height: 80px
+   .tinyletter
+      text-align: center
+      color: #999999
+.offers
+   h2
+      margin-top: 80px
+      text-align: center
+   h3
+      color: #333
+      margin-bottom: 40px
+   .link
+      display: flex
+      align-items: center 
+      justify-content: space-between
+      padding: 0 20px
+      position: absolute
+      bottom: 20px
+      left: 0
+      width: calc(100% - 40px) 
+      a
+         font-size: 13px
+         letter-spacing: 1px
+         text-transform: uppercase
+         color: #ffb700
+         font-weight: 400
+         font-family: "Rubik"
+         text-align: center
+         margin: 0
+      .price
+         margin: 0
+   .cards
+      display: flex
+      gap: 20px
+      .tinyletter
+         padding: 0 20px
+      .midletter
+         text-align: left
+         padding: 0 20px
+         margin-top: 25px
+         margin-bottom: 13px
+         white-space: now
+      .card
+         position: relative
+         padding-bottom: 65px
+.info
+   margin-top: 100px
+   .cards
+      display: flex
+      gap: 20px
+      justify-content: space-between
+
+      .files
+         background-image: url("../img/food.png")
+         padding: 25px 20px 80px
+         backgroung-position: center
+         background-size: cover
+         position: relative
+         max-width: 270px
+         .file
+            background-image: url("../img/file.png")
+            background-position: top left
+            padding-left: 50px
+            background-repeat: no-repeat
+            margin-bottom: 20px
+            .midletter
+               color: white
+            .tinyletter
+               color: #bbb
+         .tinyletter
+            color: white
+         a.button
+            padding-left: 30px
+            padding-top: 8px
+            padding-bottom: 8px
+            padding-right: 15px
+            margin: 0
+            background-color: transparent
+            border: 2px solid #ffb700
+            font-size: 12px
+            color: #ffb700
+            font-weight: 400
+            letter-spacing: 0
+            background-image: url("../img/download.png")
+            background-repeat: no-repeat
+            background-position: 10px center
+            position: absolute 
+            bottom: 30px
+      .house
+         background-image: url(../img/house.png)
+      .contact
+          text-align: center
+          position: relative
+          padding: 35px 40px 40px
+          &::before
+            +prepareBefore()
+            border: 4px solid #ffb700
+            border-right: none
+            width: 30%
+            height: 100%
+          &::after
+            +prepareBefore()
+            left: auto
+            right: 0
+            border: 4px solid #ffb700
+            border-left: none
+            width: 30%
+            height: 100%
+          .midletter
+            z-index: 1
+            font-size: 18px
+            position: absolute
+            transform: translate(-50%, -50%)
+            top: 0
+            left: 50%
+            white-space: nowrap
+            background-color: white
+            padding: 10px
+          .price
+            background-image: url("../img/call.png")
+            background-repeat: no-repeat
+            background-position: left center
+            white-space: nowrap
+            padding-left: 25px
+            font-size: 18px
+            letter-spacing: 0
+          .woman
+             width: 86px
+             height: 86px
+             left: 50%
+             bottom: 0%
+             transform: translate(-50%, 50%)
+             position: absolute
+.island_background
+   display: block
+   width: 100%
+   height: 400px
+   object-fit: cover
+   object-position: center bottom
+.gradient
+   margin-top: 77px
+   position: relative
+   &::before
+      z-index: 1
+      background-image: linear-gradient(white, transparent) 
+      +prepareBefore()
+      width: 100%
+      height: 30px
+.bottom
+   background-color: black
+   color: white
+   font-size: 16px
+   padding: 16px
+   font: "Rubik"
+   text-align: center
+.bicycle_logo
+   background-color: #0099ff
+   top:0
+   left:0
+   position: absolute
+   width: 60px
+   height: 190px
+   background-image: url(../img/bicycle_logo.png)
+   background-repeat: no-repeat
+   background-position: center 
+      
 
