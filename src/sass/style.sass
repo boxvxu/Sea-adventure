@@ -45,25 +45,42 @@ p
        display: none
     &-close
         background-image: url("../img/icons/close.png")
+.card
+   +media(640)
+      max-width: 270px
+      box-sizing: border-box
 .smallletter
-     font-size: 16px
-     line-height: 24px
+     font-size: 13px
+     line-height: 16px
+     color: #ffffff
+     +media(640)
+        font-size: 16px
+        line-height: 24px
      color: #ffffff
      font-weight: 400
      font-style: italic
      font-family: "Rubik"
      text-align: center   
 .midletter 
-   font-size: 18px
-   line-height: 26px
+   font-size: 14px
+   line-height: 18px
+   color: #333333
+   +media(640)
+      font-size: 18px
+      line-height: 26px
    color: #333333
    font-weight: 400
    font-family: "Rubik"
    text-align: center
 .bigletter
-     font-size: 36px
-     letter-spacing: 1px
-     line-height: 44px
+     font-size: 18px
+     letter-spacing: 0px
+     line-height: 22px
+     text-transform: uppercase
+     +media(640)
+        font-size: 36px
+        letter-spacing: 1px
+        line-height: 44px
      text-transform: uppercase
      color: #333333
      font-weight: 400
@@ -126,9 +143,13 @@ header
       text-transform: uppercase 
    h1 
       color: white
-      font-size: 72px
-      letter-spacing: 1px
-      line-height: 110px
+      font-size: 36px
+      letter-spacing: -1px
+      line-height: 55px
+      +media(640)
+         font-size: 72px
+         letter-spacing: 1px
+         line-height: 110px
       text-transform: uppercase
       color: #ffffff
       font-weight: 400
@@ -154,10 +175,16 @@ header
       align-items: center
       margin-bottom: 50px
       ul
-         display: flex
+         display: none
+         +media(640)
+            display: flex
          gap: 30px
       a
          font-family: "Rubik"
+      .burger
+         display: block
+         +media(640)
+            display: none
    .frame
       margin: 0 auto
       max-width: 367px
@@ -198,7 +225,8 @@ header
         
 main
    .cards
-      display: flex
+      display: flex 
+      flex-wrap: wrap
       gap: 30px
       margin-top: 50px
       .card
@@ -227,12 +255,19 @@ main
    text-align: center
 
 .thailand
-   display: flex
+   +media(640)
+      display: flex
+   img
+      dispay: block
+      width: 100%
+      max-width: 370px
+
    .smallletter
       color:#000
       text-align: left
    .rest
-      display: flex   
+      +media(640)
+         display: flex   
    .price
       white-space: nowrap
    .button
@@ -248,16 +283,24 @@ main
    background-size: cover
    background-position: center
    .wrapper
+      flex-direction: column
       display: flex
       padding-top: 90px
-
+      padding-bottom: 90px
+      +media(640)
+         flex-direction: row
    .slogan 
-      width: 50%
+      +media(640)
+         width: 50%
       text-align: left
+
       h2.bigletter
-         font-size: 56px
+         font-size: 32px
          margin-bottom: 30px
-         line-height: 66px
+         line-height: 38px
+         +media(640)
+            font-size: 56px
+            line-height: 66px
          span 
             color: #0099ff
       p.smallletter
@@ -266,7 +309,8 @@ main
       a.button
          margin: 30px 0
 .caption
-   width: 50%
+   +media(640)
+      width: 50%
    display: flex
    justify-content: center
    flex-direction: column
@@ -331,6 +375,7 @@ main
       .price
          margin: 0
    .cards
+      flex-wrap: wrap
       display: flex
       gap: 20px
       .tinyletter
@@ -347,6 +392,7 @@ main
 .info
    margin-top: 100px
    .cards
+      flex-wrap: wrap
       display: flex
       gap: 20px
       justify-content: space-between
