@@ -135,6 +135,8 @@ p
 header
    background-image: url("../img/boat.png")
    min-height: 800px
+   background-size: cover 
+   background-position: center
    a
       font-size: 16px
       color: white
@@ -178,8 +180,18 @@ header
          gap: 30px
          +media(640)
             display: flex
+            gap: 10px
+         +media(840)
+            display: flex
+            gap: 30px
+         
       a
          font-family: "Rubik"
+         +media(640)
+            font-size: 11px
+         +media(840)
+            font-size: 16px
+            
       .burger
          display: block
          +media(640)
@@ -191,6 +203,10 @@ header
          top: 70px
          background-color: blue
          padding: 20px
+         +media(640)
+            display: flex!important
+            position: static
+            background-color: transparent
    .frame
       margin: 0 auto
       max-width: 367px
@@ -235,6 +251,9 @@ main
       flex-wrap: wrap
       gap: 30px
       margin-top: 50px
+      justify-content: space-around 
+      +media(880)
+         justify-content: space-between
       .card
          img
             display: block
@@ -249,7 +268,8 @@ main
          margin-left: 0
 .plan
    text-align: center
-   padding-left: 25%
+   +media(880)
+      padding-left: 25%
 .showplan
    font-size: 12px
    letter-spacing: 0px
@@ -261,21 +281,24 @@ main
    text-align: center
 
 .thailand
-   +media(640)
+   +media(840)
       display: flex
    img
       dispay: block
       width: 100%
-      max-width: 370px
+      +media(840)
+         max-width: 370px
 
    .smallletter
       color:#000
       text-align: left
    .rest
       +media(640)
-         display: flex   
+         display: flex
+         gap: 10px   
    .price
       white-space: nowrap
+
    .button
       display: inline-block
       margin-right: 10px
@@ -305,6 +328,9 @@ main
          margin-bottom: 30px
          line-height: 38px
          +media(640)
+            font-size: 33px
+            line-height: 43px
+         +media(840)
             font-size: 56px
             line-height: 66px
          span 
@@ -316,6 +342,8 @@ main
          margin: 30px 0
 .caption
    display: flex
+   padding-top: 40px
+   padding-bottom: 40px 
    justify-content: center
    flex-direction: column
    position: relative
@@ -344,12 +372,21 @@ main
       width: 42px
       height: 38px
       margin-bottom: 14px
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translate(-50%, -50%)
    .midletter
       margin-top: 17px
       color: #ffffff
    .man
       width: 80px
       height: 80px
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translate(-50%, 50%)
+
    .tinyletter
       text-align: center
       color: #999999
@@ -386,6 +423,9 @@ main
       flex-wrap: wrap
       display: flex
       gap: 20px
+      justify-content: space-around
+      +media(880)
+         justify-content: space-between
       .tinyletter
          padding: 0 20px
       .midletter
@@ -406,6 +446,8 @@ main
       gap: 20px
       justify-content: center
       +media(640)
+         justify-content: space-around
+      +media(880)
          justify-content: space-between
       .files
          background-image: url("../img/food.png")
