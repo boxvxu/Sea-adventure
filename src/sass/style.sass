@@ -336,7 +336,7 @@ main
       flex-direction: column
       display: flex
       padding-top: 90px
-      padding-bottom: 90px
+      padding-bottom: 64px
       +media(640)
          flex-direction: row
    .slogan 
@@ -346,7 +346,7 @@ main
 
       h2.bigletter
          font-size: 32px
-         margin-bottom: 30px
+         margin-bottom: 8px
          line-height: 38px
          +media(640)
             font-size: 33px
@@ -359,14 +359,24 @@ main
       p.smallletter
          font-style: normal
          text-align: left
+         font-size: 14px
+         max-width: 465px
+         margin: 0
+         line-height: 24.5px
+      p.midletter
+         margin-top: 7px
       a.button
          margin: 30px 0
 .caption
-   display: flex
-   padding-top: 40px
+   padding-top: 35px
    padding-bottom: 40px 
+   padding-right: 35px
+   padding-left: 35px
    justify-content: center
-   flex-direction: column
+   max-width: 505px
+   height: max-content
+   margin-top: 23px
+   column-gap: 30px
    position: relative
    +media(640)
       width: 50%
@@ -401,23 +411,25 @@ main
       margin-top: 17px
       color: #ffffff
    .man
-      width: 80px
-      height: 80px
+      width: 125px
+      height: 125px
       position: absolute
       bottom: 0
       left: 50%
-      transform: translate(-50%, 50%)
+      transform: translate(-50%, 60%)
 
    .tinyletter
       text-align: center
       color: #999999
 .offers
    h2
-      margin-top: 80px
+      margin-top: 71px
+      margin-bottom: 3px
+      letter-spacing: 0
       text-align: center
    h3
       color: #333
-      margin-bottom: 40px
+      margin-bottom: 35px
    .picture
       width: 100%
    .link
@@ -452,14 +464,14 @@ main
       .midletter
          text-align: left
          padding: 0 20px
-         margin-top: 25px
-         margin-bottom: 13px
-         white-space: now
+         margin-top: 15px
+         margin-bottom: 5px
+         white-space: nowrap
       .card
          position: relative
          padding-bottom: 65px
 .info
-   margin-top: 100px
+   margin-top: 157px
    .cards
       flex-wrap: wrap
       align-content: center
@@ -483,15 +495,17 @@ main
             background-position: top left
             padding-left: 50px
             background-repeat: no-repeat
-            margin-bottom: 20px
+            margin-bottom: 12px
             .midletter
                color: white
+               line-height: 21px
             .tinyletter
                color: #bbb
+               margin-top: 10px
          .tinyletter
             color: white
          a.button
-            padding-left: 30px
+            padding-left: 35px
             padding-top: 8px
             padding-bottom: 8px
             padding-right: 15px
@@ -506,7 +520,7 @@ main
             background-repeat: no-repeat
             background-position: 10px center
             position: absolute 
-            bottom: 30px
+            bottom: 27px
       .house
          background-image: url(../img/house.png)
       .contact
@@ -528,15 +542,17 @@ main
             width: 30%
             height: 100%
           .midletter
-            z-index: 1
             font-size: 18px
+            white-space: nowrap
+            background-color: white
+            padding: 10px
+          h2
+            z-index: 1
             position: absolute
             transform: translate(-50%, -50%)
             top: 0
             left: 50%
-            white-space: nowrap
-            background-color: white
-            padding: 10px
+
           .price
             background-image: url("../img/call.png")
             background-repeat: no-repeat
@@ -546,11 +562,11 @@ main
             font-size: 18px
             letter-spacing: 0
           .woman
-             width: 86px
-             height: 86px
+             width: 125px
+             height: 125px
              left: 50%
              bottom: 0%
-             transform: translate(-50%, 50%)
+             transform: translate(-50%, 60%)
              position: absolute
 .island_background
    display: block
@@ -570,7 +586,7 @@ main
 .bottom
    background-color: black
    color: white
-   font-size: 16px
+   font-size: 13px
    padding: 16px
    font: "Rubik"
    text-align: center
