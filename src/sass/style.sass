@@ -321,12 +321,19 @@ main
       padding-left: 25%
    a
       position: relative 
+      color: #09f
+      &:hover
+         color: blue
+      &:hover::before
+         border-color: blue
+      &:hover::after
+         border-color: blue
       &::before
          +prepareBefore()
          left: 100%
          width: 15px
          height: 15px
-         border: 2px solid blue
+         border: 2px solid #09f
          transform: translate(10px, -50%)
          top: 50%
          border-radius: 50%
@@ -335,7 +342,7 @@ main
          left: 100%
          width: 5px
          height: 5px
-         border: 2px solid blue
+         border: 2px solid #09f
          transform: translate(14px, -50%) rotate(45deg)
          top: 50%
          border-bottom: none
@@ -384,6 +391,9 @@ main
       color:  #0099ff
       background-color: white
       border:  #0099ff 1px solid
+      &:hover
+         color: white
+         background-color: #0099ff
 .life
    background-image: url("../img/background.png") 
    background-size: cover
@@ -405,6 +415,7 @@ main
          font-size: 32px
          margin-bottom: 8px
          line-height: 38px
+         color: white
          +media(640)
             font-size: 33px
             line-height: 43px
@@ -413,6 +424,7 @@ main
             line-height: 66px
          span 
             color: #0099ff
+            display: block
       p.smallletter
          font-style: normal
          text-align: left
@@ -507,6 +519,9 @@ main
          font-family: "Rubik"
          text-align: center
          margin: 0
+         transition: all 0.5s linear
+         &:hover
+            transform: scale(110%)
       .price
          margin: 0
    .cards
@@ -578,6 +593,10 @@ main
             background-position: 10px center
             position: absolute 
             bottom: 27px
+            transition: all 0.5s linear
+            &:hover
+               background-color: #ffb70099
+               color: white
       .house
          background-image: url(../img/house.png)
       .contact
@@ -625,6 +644,15 @@ main
              bottom: 0%
              transform: translate(-50%, 60%)
              position: absolute
+.more-info
+   +media(840)
+      max-width: 100%
+      text-align: center
+      width: 100%
+   +media(1240)
+      max-width: 270px
+      width: auto
+      text-align: left
 .island_background
    display: block
    width: 100%
