@@ -680,12 +680,17 @@ main
       font-family: "Rubik"
       color: white
 .bicycle_logo
+   position: relative
+   display: block
+.bicycle_logo::after
+   z-index: 1
+   content: ""
    background-color: #0099ff
    top:0
    left:0
    position: absolute
    width: 60px
-   height: 68.5vw
+   height: 100%
    background-image: url(../img/bicycle_logo.png)
    background-repeat: no-repeat
    background-position: center 
